@@ -1,6 +1,6 @@
 # Polarvargen: frontend assembly, build on gulp and webpack
 
-<img align="right" height="400" src="http://jway.pro/static/polarvargen.svg">
+<img align="right" height="300" src="http://jway.pro/static/polarvargen.svg">
 
 
 ### Documentation
