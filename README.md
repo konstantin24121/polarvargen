@@ -2,8 +2,7 @@
 
 > frontend assembly, build on gulp and webpack
 
-[![npm][npm-image]][npm-url] [![license][license-image]][license-url]
-[![changelog][changelog-image]][changelog-url]
+[![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000?style=flat-square)](https://www.npmjs.com/package/polarvargen)
 
 <img align="right" height="300" src="http://jway.pro/static/polarvargen.svg">
 
