@@ -1,0 +1,33 @@
+{
+  "name": "polarvargen",
+  "version": "0.0.1",
+  "description": "Frontend assembly",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konstantin24121/polarvargen.git"
+  },
+  "keywords": [
+    "assembly"
+  ],
+  "author": "konstantin24121@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konstantin24121/polarvargen/issues"
+  },
+  "homepage": "https://github.com/konstantin24121/polarvargen#readme",
+  "dependencies": {
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "nconf": "^0.8.4",
+    "node-sass": "^3.7.0",
+    "normalize.css": "^4.1.1",
+    "sass-loader": "^3.2.0",
+    "susy": "^2.2.12",
+    "webpack": "^1.13.1"
+  },
+  "devDependencies": {}
+}

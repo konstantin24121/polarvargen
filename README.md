@@ -1,4 +1,9 @@
-# Polarvargen: frontend assembly, build on gulp and webpack
+# Polarvargen
+
+> frontend assembly, build on gulp and webpack
+
+[![npm][npm-image]][npm-url] [![license][license-image]][license-url]
+[![changelog][changelog-image]][changelog-url]
 
 <img align="right" height="300" src="http://jway.pro/static/polarvargen.svg">
 

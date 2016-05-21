@@ -1,3 +1,3 @@
 # Project TODO list
 
-- [ ] - Zoom logo in README.md
+- [x] - Zoom logo in README.md

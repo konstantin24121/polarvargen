@@ -1,0 +1,13 @@
+@import "~normalize.css/normalize.css";
+@import "~bourbon/app/assets/stylesheets/bourbon";
+
+@import "layout";
+
+body{
+	background-color: #fff;
+	@include transform(translate(10deg))
+	
+	&__title{
+		color: black;
+	}
+}
