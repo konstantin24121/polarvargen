@@ -1,10 +1,10 @@
 {
   "name": "polarvargen",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Frontend assembly",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "webpack --config webpack.config.test.js && mocha test/tests"
   },
   "repository": {
     "type": "git",
@@ -20,10 +20,12 @@
   },
   "homepage": "https://github.com/konstantin24121/polarvargen#readme",
   "dependencies": {
+    "chai": "^3.5.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "less": "^2.7.1",
     "less-loader": "^2.2.3",
+    "mocha": "^2.4.5",
     "nconf": "^0.8.4",
     "node-sass": "^3.7.0",
     "normalize.css": "^4.1.1",
