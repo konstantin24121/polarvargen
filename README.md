@@ -17,7 +17,7 @@ Visit [webpack.github.io](http://webpack.github.io/) for more information.
 
 
 ### Release History
-See the [CHANGELOG](CHANGELOG).
+See the [CHANGELOG](CHANGELOG.md).
 
 [changelog-image]: https://img.shields.io/badge/changelog-md-blue.svg?style=flat-square
 [changelog-url]: CHANGELOG.md
