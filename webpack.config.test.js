@@ -1,10 +1,10 @@
 'use strict';
-const NODE_ENV = process.env.NODE_ENV || 'development';
+var NODE_ENV = process.env.NODE_ENV || 'development';
 
-let config = require('nconf');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
-let precss       = require('precss');
-let autoprefixer = require('autoprefixer');
+var config = require('nconf');
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var precss       = require('precss');
+var autoprefixer = require('autoprefixer');
 
 config.argv().env().file({ file: './polarvargen.json' });
 
@@ -20,7 +20,7 @@ module.exports = {
     output: {
     	path: __dirname + config.get('distFolder'),
         publicPath: config.get('publicPath'),
-        filename: `${config.get('jsPath')}/[name].js`,
+        filename: config.get('jsPath')+'/[name].js',
         library: "[name]",
     },
 
@@ -56,6 +56,6 @@ module.exports = {
     },
 
     plugins:[
-    	new ExtractTextPlugin(`${config.get('cssPath')}/[name].css`, {allChunks: true}),
+    	new ExtractTextPlugin(config.get('cssPath')+'/[name].css', {allChunks: true}),
     ],
 }
