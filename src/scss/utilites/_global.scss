@@ -1,0 +1,34 @@
+//Colors
+//////////
+$c_gray_1: #FFFFFF;
+$c_gray_0: #000000;
+
+//////////
+//Dimentions
+//////////
+$d_limiter-mnw: 31rem;
+$d_limiter_mw__xs: 53.4rem;
+$d_limiter_mw__sm: 75rem;
+$d_limiter_mw__md: 97rem;
+$d_limiter_mw__lg: 100rem;
+$d_limiter_mw__xlg: 130rem;
+
+//////////
+//Typographics
+//////////
+$b_fs: 10px;        //base font size
+$b_lh: 1.613;       //base line height
+
+//////////
+//Fonts
+//////////
+$f_Rob :"Roboto";
+
+//////////
+//Other
+//////////
+$b_td: 0.3s;        //base transition duration
+$b_tf: cubic-bezier(0.23, 1, 0.32, 1);        //base transition funtion
+$img:'../img/';     //path to img
+$fonts:'../fonts/'; //path to fonts
+$svg:'../svg/';	    //path to svg

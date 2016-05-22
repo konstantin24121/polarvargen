@@ -1,0 +1,11 @@
+///Файл настройки сетки susy
+///Susy grid config file
+@import '~susy/sass/susy';
+
+$susy: ( 
+  columns: 12, 
+  gutters: 1/3, 
+  math: fluid, 
+  output: float, 
+  gutter-position: split,
+);

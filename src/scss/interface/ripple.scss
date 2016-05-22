@@ -1,0 +1,18 @@
+//Ripple effect
+.ripple{
+	&__circle{
+		position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    @include transform(translate(-50%, -50%));
+	    opacity: 0;
+	    width: 0;
+	    height: 0;
+	    border-radius: 50%;
+	    background: transparentize(white, 0.95);
+
+	    &.is-active{
+	        animation: a-ripple .4s ease-in;
+	    }
+	}
+}

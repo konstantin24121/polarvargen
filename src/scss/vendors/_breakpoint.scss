@@ -1,0 +1,14 @@
+//Brakpoints settings
+
+@import '~breakpoint-sass/stylesheets/breakpoint';
+
+
+@include breakpoint-set('to ems', false);
+@include breakpoint-set('no query fallbacks', false);
+
+@include add-breakpoint('xs', (min-width 554px));
+@include add-breakpoint('sm', (min-width 768px));
+@include add-breakpoint('md', (min-width 992px));
+@include add-breakpoint('lg', (min-width 1200px));
+@include add-breakpoint('xlg', (min-width 1600px));
+@include add-breakpoint('horizont', (orientation landscape));

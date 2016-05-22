@@ -1,0 +1,5 @@
+.container{
+	min-height: 500px;
+	@include break;
+	padding: 15px 0;
+}

@@ -1,0 +1,84 @@
+.notify{
+	position: fixed;
+	z-index: 299792458;
+	
+	background-color: $c_gray_1;
+	width: 100%;
+	padding: 2rem;
+	@include transition-property(transform);
+	@include transition-duration($b_td * 3);
+	@include transition-timing-function($b_tf);
+	
+	@include respond-to('xs') {
+		width: 30rem;
+	}
+
+	$offset_from_screen: 2rem;
+
+	&._top{
+		top: 0;
+		@include transform(translateY(-120%))
+
+		@include respond-to('xs') {
+			top: $offset_from_screen;
+		}
+	}
+	&._bottom{
+		bottom: 0;
+
+		@include transform(translateY(120%))
+
+		@include respond-to('xs') {
+			bottom: $offset_from_screen;
+		}
+	}
+	&._left{
+		left: 0;
+
+		@include respond-to('xs') {
+			left: $offset_from_screen;
+			@include transform(translateX(-120%))
+		}
+	}
+	&._right{
+		right: 0;
+
+		@include respond-to('xs') {
+			right: $offset_from_screen;
+			@include transform(translateX(120%))
+		}
+	}
+
+	&__close{
+		$scale__close: 2rem;
+		position: absolute;
+		top: 0;
+		right: 0;
+		line-height: $scale__close + 0.4rem;
+		text-align: center;
+		width: $scale__close;
+		height: $scale__close;
+		background-color: $c_gray_0;
+		border: none;
+		z-index: 10;
+		padding: 0;
+	}
+
+	&__title{
+		@include span(10);
+		font-weight: 600;
+	}
+
+	&__descr{
+		padding: 0.2rem;
+		@include span(12);
+	}
+	&__time{
+		@include span(12);
+		text-align: right;
+	}
+
+	&.is-show{
+		@include transform(translateX(0) translateY(0))
+	}
+}

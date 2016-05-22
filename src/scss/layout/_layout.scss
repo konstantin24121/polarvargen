@@ -1,0 +1,26 @@
+.wrap{}
+
+.limiter{
+	height: 100%;
+	width: 100%;
+	min-width: $d_limiter-mnw;
+	margin: 0 auto;
+	overflow: hidden;
+
+	@include respond-to('xs') {
+		max-width: $d_limiter_mw__xs;
+		padding: 0;
+	}
+	@include respond-to('sm') {
+		max-width: $d_limiter_mw__sm;
+	}
+	@include respond-to('md') {
+		max-width: $d_limiter_mw__md;
+	}
+	@include respond-to('lg') {
+		max-width: $d_limiter_mw__lg;
+	}
+	@include respond-to('xlg') {
+		max-width: $d_limiter_mw__xlg;
+	}
+}

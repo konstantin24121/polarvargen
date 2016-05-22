@@ -1,0 +1,13 @@
+// @include font-face("FONT", $fonts+"/FONT", normal);
+
+html{
+	font-size: $b_fs;
+	line-height: $b_lh;
+	@include backface-visibility(hidden);
+}
+
+body{
+	font-size: 1.4rem;
+	font-family: $f-Rob;
+	line-height: $b_lh;
+}

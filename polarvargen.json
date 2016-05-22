@@ -2,5 +2,6 @@
 	"sourceFolder": "/src",
 	"distFolder": "/public",
 	"publicPath": "/",
-	"cssPath": "/css"
+	"cssPath": "/css",
+	"jsPath": "/js"
 }

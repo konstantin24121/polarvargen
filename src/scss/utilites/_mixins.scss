@@ -1,0 +1,45 @@
+@mixin without-indents {
+	padding: 0;
+	margin: 0;
+}
+
+///Хелпер для создания псевдоэллемента
+///Helper for pseudo ellement
+///@param {String} $w
+///@param {String} $h
+///@param {String} $dis
+///@param {String} $pos
+@mixin pseudo($w:20px, $h:20px, $dis:block, $pos:absolute){
+	content: '';
+	width: $w;
+	height: $h;
+	display: $dis;
+	position: $pos;
+	background-color: black;
+}
+///Хелпер для создания одинакового описания для нескольких состояний блока
+///@param {List} $events
+@mixin events($events:(':active',':focus',':hover')){
+	$events-str:'';
+	@each $event in $events { 
+		$events-str: $events-str + '&#{$event},'
+	}
+	#{$events-str}{
+		@content;
+	}
+}
+
+///применить стили для мозилы
+///Mozilla styles
+@mixin for-moz(){
+	@-moz-document url-prefix(){
+		@content;
+	}
+}
+
+///Хуясь, clip-path
+///Clip-path, mother fucker
+@mixin clip-path($wat){
+	clip-path: $wat;
+	-webkit-clip-path: $wat;
+}
