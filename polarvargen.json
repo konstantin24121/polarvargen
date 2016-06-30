@@ -3,5 +3,15 @@
 	"distFolder": "/public",
 	"publicPath": "/",
 	"cssPath": "/css",
-	"jsPath": "/js"
+	"jsPath": "/js",
+	"vendorPath": "/vendors",
+
+	"entryCss" : {
+		"baseSass": "./scss/views/base",
+		"baseLess": "./less/app",
+		"baseStyl": "./stylus/app"
+    },
+    "entryJs" : {
+        "app": "./coffee/app"
+    }
 }

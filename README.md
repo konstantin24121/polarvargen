@@ -8,12 +8,21 @@
 
 <img align="right" height="300" src="http://jway.pro/static/polarvargen.svg">
 
+### How use
+
+Setting for assebly see in polarvargen.json file.
+
+## Note
+
+If you woudn't reload your page after entry points style will compile, use *Style mark into enrty points name (Example ./scss/appStyle.scss).
 
 ### Documentation
 
 Visit [gulpjs.com](http://gulpjs.com/) for more information.
 
 Visit [webpack.github.io](http://webpack.github.io/) for more information.
+
+Visit [bower.io](https://bower.io/) for more information.
 
 
 ### Release History

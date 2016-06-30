@@ -1,42 +1,48 @@
 'use strict';
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
-let config = require('nconf');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
-let precss       = require('precss');
-let autoprefixer = require('autoprefixer');
+const config            = require('nconf');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const precss            = require('precss');
+const autoprefixer      = require('autoprefixer');
+const path              = require("path");
+const merge             = require('merge');
 
 config.argv().env().file({ file: './polarvargen.json' });
 
 
 module.exports = {
-	context: __dirname + config.get('sourceFolder'),
+	context: path.join(__dirname, config.get('sourceFolder')),
 
-	entry: {
-		baseSass: './scss/views/base',
-		baseLess: './less/app',
-		baseStyl: './stylus/app',
-    },
+	entry: merge(config.get('entryCss'),config.get('entryJs')),
 
-    output: {
-    	path: __dirname + config.get('distFolder'),
+     output: {
+        path: path.join(__dirname , config.get('distFolder')),
         publicPath: config.get('publicPath'),
         filename: `${config.get('jsPath')}/[name].js`,
         library: "[name]",
     },
 
     resolve: {
-    	extensions: ['', '.js', '.scss', '.less', '.styl']
+    	extensions: ['', '.css', '.js', '.coffee', '.scss', '.less', '.styl']
     },
 
     resolveLoader: {
-    	modulesDirectories: ['node_modules'],
+    	modulesDirectories: [path.join(__dirname, 'node_modules')],
     	moduleTemplates: ['*-loader'],
     	extensions: ['', '.js']
     },
 
     module: {
     	loaders: [
+            { 
+                test: /\.coffee$/,
+                loader: "coffee" 
+            },
+            {
+                test: /\.(coffee\.md|litcoffee)$/, 
+                loader: "coffee-loader?literate"
+            },
 	    	{
 	    		test: /\.less$/,
 	    		loader: ExtractTextPlugin.extract('css!postcss?browsers=last 2 versions?!less')
@@ -49,6 +55,10 @@ module.exports = {
 	    		test: /\.styl$/,
 	    		loader: ExtractTextPlugin.extract('css!postcss?browsers=last 2 versions?!stylus')
 	    	},
+            {
+                test: /\.(png|woff|woff2|eot|ttf|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, 
+                loader: `url?limit=100000`
+            }
     	]
     },
 
@@ -61,6 +71,4 @@ module.exports = {
     ],
 
     devtool: NODE_ENV == 'development' ? 'cheap-inline-module-source-map' : null,
-
-    watch: true,
 }

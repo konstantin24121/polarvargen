@@ -8,3 +8,6 @@ node_js:
   - "6"
 before_script:
   - npm install -g webpack
+  - npm install -g gulp
+  - npm install -g gulp-cli
+  - npm install -g mocha
