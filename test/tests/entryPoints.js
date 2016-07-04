@@ -17,11 +17,11 @@ describe('All entry points are compiled successfully', function() {
 					fs.stat(path, function(err, data) { 
 	                   	if (err)
 							throw err;       
-						return true;
+						done();
 		            }); 
 				});
 			})(pathCss);
-		1}
+		}
 	});
 	
 	describe('script entry points', function () {
@@ -31,11 +31,11 @@ describe('All entry points are compiled successfully', function() {
 		    pathJs = path.join('.', config.get('distFolder'), config.get('jsPath'), pointJs+'.js');     
 
 			(function(path){
-		        it('should return true when '+path+' file exist', function (done) { 
+		        it('should return true when '+path+' file exist', function () { 
 		            fs.stat(path, function(err, data) { 
 	                   	if (err)
 							throw err;       
-						return true;
+						done();
 		            }); 
 		         });
 		    })(pathJs);
