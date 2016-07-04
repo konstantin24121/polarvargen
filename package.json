@@ -19,7 +19,7 @@
     "url": "https://github.com/konstantin24121/polarvargen/issues"
   },
   "engines" : { 
-      "node" : ">=4.1"
+      "node" : ">=4.0"
   },
   "homepage": "https://github.com/konstantin24121/polarvargen#readme",
   "dependencies": {

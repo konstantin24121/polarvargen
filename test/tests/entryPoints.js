@@ -17,7 +17,7 @@ describe('All entry points are compiled successfully', function() {
 					fs.stat(path, function(err, data) { 
 	                   	if (err)
 							throw err;       
-						done();
+						return true;
 		            }); 
 				});
 			})(pathCss);
@@ -35,7 +35,7 @@ describe('All entry points are compiled successfully', function() {
 		            fs.stat(path, function(err, data) { 
 	                   	if (err)
 							throw err;       
-						done();
+						return true;
 		            }); 
 		         });
 		    })(pathJs);
