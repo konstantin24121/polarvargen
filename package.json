@@ -18,6 +18,9 @@
   "bugs": {
     "url": "https://github.com/konstantin24121/polarvargen/issues"
   },
+  "engines" : { 
+      "node" : ">=4.1"
+  },
   "homepage": "https://github.com/konstantin24121/polarvargen#readme",
   "dependencies": {
     "autoprefixer": "^6.3.6",
